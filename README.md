@@ -4,6 +4,8 @@
 
 `"kfc-k2transfer": "git+https://github.com/k2jf/kfc-k2transfer.git"`
 
+然后执行 `npm install` 重新安装插件
+
 ## API
 
 | 属性                    | 说明                           | 类型                 | 默认值        |
