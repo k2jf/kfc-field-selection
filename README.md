@@ -4,7 +4,7 @@
 
 `"kfc-k2transfer": "git+https://github.com/k2jf/kfc-k2transfer.git"`
 
-然后执行 `npm install` 重新安装插件
+然后执行 `npm install kfc-k2transfer` 安装插件
 
 ## API
 
@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import { FieldSelection, FieldSelectedButton } from '@/components/FieldSelection'
+import { FieldSelection, FieldSelectedButton } from '@/components/kfc-field-selection'
 
 export default {
   name: 'Another',
