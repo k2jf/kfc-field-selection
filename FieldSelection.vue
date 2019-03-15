@@ -44,9 +44,9 @@ export default {
     }
   },
   mounted () {
-    this.$axios.get('/data-service/v2/field-groups').then(res => {
-      console.log(res)
-      // this.fields = res
+    this.$axios.get('/kmx/data-service/v2/field-groups/' + this.fieldType).then(res => {
+      console.log(res.data.fieldGroup.fields)
+      this.fields = res.data.fieldGroup.fields
     })
   },
   methods: {
