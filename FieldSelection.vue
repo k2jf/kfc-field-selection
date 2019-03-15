@@ -15,7 +15,6 @@
 </template>
 <script>
 import K2Transfer from 'kfc-k2transfer'
-import { token, baseUrl, testUrl } from './conf'
 
 export default {
   name: 'FieldSelection',
@@ -45,18 +44,10 @@ export default {
     }
   },
   mounted () {
-    var xhr = new XMLHttpRequest()
-    xhr.open('GET', `${baseUrl}${this.fieldType}`, true)
-    xhr.setRequestHeader('K2_KEY', token)
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        const res = JSON.parse(xhr.responseText)
-        if (res.code === 0) {
-          this.fields = res.fieldGroup.fields
-        }
-      }
-    }
-    xhr.send()
+    this.$axios.get('/data-service/v2/field-groups').then(res => {
+      console.log(res)
+      // this.fields = res
+    })
   },
   methods: {
     handleChange (newTargetKeys) {
