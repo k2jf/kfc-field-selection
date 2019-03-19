@@ -1,15 +1,17 @@
 > 组件依赖 view， 请确保已安装
 
-将下面配置加入 `package.json >> dependencies` 中
+## 维护者
+kk
 
-`"kfc-k2transfer": "git+https://github.com/k2jf/kfc-k2transfer.git"`
-
-然后执行
+## 使用说明
+该组件依赖[kfc-k2transfer](https://github.com/k2jf/kfc-k2transfer)组件，使用时需要将两个组件一起安装
 
 ```bash
-# 安装依赖
-npm install kfc-k2transfer
-# 克隆组件到当前项目components中
+
+# 克隆 kfc-k2transfer 组件到当前项目components中
+git remote add -f kfc-k2transfer git@github.com:k2jf/kfc-k2transfer.git
+git subtree add -P src/components/kfc-k2transfer kfc-k2transfer master --squash
+# 克隆 kfc-field-selection 组件到当前项目components中
 git remote add -f kfc-field-selection git@github.com:k2jf/kfc-field-selection.git
 git subtree add -P src/components/kfc-field-selection kfc-field-selection master --squash
 # 检查一下是否成功连接远程库 kfc-field-selection

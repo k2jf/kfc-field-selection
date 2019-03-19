@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import K2Transfer from 'kfc-k2transfer'
+import K2Transfer from '@/components/kfc-k2transfer'
 
 export default {
   name: 'FieldSelection',
