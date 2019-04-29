@@ -1,20 +1,18 @@
 > 组件依赖 view， 请确保已安装
 
-## 维护者
-kk
+将下面配置加入 `package.json >> dependencies` 中
 
-## 使用说明
-该组件依赖[kfc-k2transfer](https://github.com/k2jf/kfc-k2transfer)组件，使用时需要将两个组件一起安装
+`"kfc-transfer": "git+https://github.com/k2jf/kfc-transfer.git"`
+
+然后执行
 
 ```bash
-
-# 克隆 kfc-k2transfer 组件到当前项目components中
-git remote add -f kfc-k2transfer git@github.com:k2jf/kfc-k2transfer.git
-git subtree add -P src/components/kfc-k2transfer kfc-k2transfer master --squash
-# 克隆 kfc-field-selection 组件到当前项目components中
-git remote add -f kfc-field-selection git@github.com:k2jf/kfc-field-selection.git
-git subtree add -P src/components/kfc-field-selection kfc-field-selection master --squash
-# 检查一下是否成功连接远程库 kfc-field-selection
+# 安装依赖
+npm install kfc-transfer
+# 克隆组件到当前项目components中
+git remote add -f kfc-kmx-tsdw-field git@github.com:k2jf/kfc-kmx-tsdw-field.git
+git subtree add -P src/components/kfc-kmx-tsdw-field kfc-kmx-tsdw-field master --squash
+# 检查一下是否成功连接远程库 kfc-kmx-tsdw-field
 git remote -vv
 ```
 
@@ -30,7 +28,7 @@ git remote -vv
   </div>
 </template>
 <script>
-import { FieldSelection, FieldSelectedButton } from '@/components/kfc-field-selection'
+import { FieldSelection, FieldSelectedButton } from '@/components/kfc-kmx-tsdw-field'
 
 export default {
   components: {
